@@ -8,7 +8,7 @@ class Blog(BaseModel):
     content: str
 
 class CreateBlog(Blog):
-    title: str
+    title: str 
     content: str
 
 class updateBlog(Blog):
