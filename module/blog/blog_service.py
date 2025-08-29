@@ -19,9 +19,11 @@ def create_blog(dto: CreateBlog):
     return new_blog
 
 def update_blog(id: UUID, dto: UpdateBlog):
+    get_blog_by_id(id)
     updated_blog = blog_repository.update(id, dto)
     return updated_blog
 
 def delete_blog(id: UUID):
+    get_blog_by_id(id)
     blog_repository.delete(id)
     return { "message": f"blog {id} deleted"}
